@@ -9,7 +9,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "wiki-portfolio/index.html"
+        "destination": "index.html"
       }
     ]
   }
