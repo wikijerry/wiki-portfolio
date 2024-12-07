@@ -1,334 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-signin-client_id" content="757776877855-48ivk32lb2ik4en0efvlce8od7u9a698.apps.googleusercontent.com">
-    <title>Portfolio</title>
-    
-    <link rel="icon" href="img/w.png">
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="style.css">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/11.0.2/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/11.0.2/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-</head>
-<body>
-    
-<!-- header section starts  -->
-
-<header>
-
-    <div class="user">
-        <a href="https://www.instagram.com/the_cyborgh_guy/">
-        <img src="img/1633943679232.jpg"  alt="the_cybrogh_guy" title="Tap to view">
-        </a>
-        <h3 class="name">Vignesh</h3>
-        <p class="post">Python developer <br><span>Tata Consultancy Services</span> </p>
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
-
-    <nav class="navbar" >
-        <ul>
-            <li><a href="#home">home</a></li>
-            <li><a href="#about">about</a></li>
-            <li><a href="#education">education</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#portfolio">Projects</a></li>
-            <li><a href="#contact">contact</a></li>
-
-        </ul>
-    </nav>
-
-</header>
-
-<!-- header section ends -->
-
-<div id="id" class="fas fa-bars"></div>
-
-
-<!-- home section starts  -->
-
-<section class="home" id="home">
-    <h3>Hi there!</h3>
-    <h1>I'm <span>Vignesh Ramesh</span></h1>
-    <p>I'm a passionate Python developer with 4+ years of experience in crafting efficient and elegant solutions. I specialize in data science and web development, finding joy in transforming complex problems into simple code.</p>
-  
-    <p><strong>Core Skills:</p>
-    <ul>
-      <li>Data structures and algorithms</li>
-      <li>Control flow</li>
-      <li>Functions</li>
-      <li>Object-oriented programming (OOP)</li>
-      <li>Exception handling</li>
-      <li>Libraries (NumPy, Pandas, Django)</li>
-    </ul>
-  
-    <p>Ready to see my work in action? Explore my portfolio or let's connect to discuss your project!</p>
-  
-    <a href="#about"><button class="btn">About me <i class="fas fa-user"></i></button></a>
-    <a href="#portfolio"><button class="btn">View Portfolio <i class="fas fa-briefcase"></i></button></a>
-    <a href="#contact"><button class="btn">Contact Me <i class="fas fa-envelope"></i></button></a>
-  </section>
-  
-
-
-<!-- home section ends -->
-
-<!-- about section starts  -->
-
-<section class="about" id="about">
-
-<h1 class="heading"> <span>About</span> Me </h1>
-
-<div class="row">
-
-    <div class="info">
-        <h3> <span> name : </span> Vignesh R </h3>
-        <h3 id="age"> Age :<span> 27 </span>  </h3>
-        <h3> <span> qualification : </span> Bachelor of computer applications</h3>
-        <h3> <span> Role : </span> Web developer </h3>
-        <h3> <span> languages known : </span> English , Tamil , Kannada , Telugu </h3>
-        <a href="img/Vignesh R .pdf" title="Click here to download"><button class="btn"> download CV <i class="fas fa-download"></i> </button></a>
-    </div>
-
-    <div class="counter">
-
-        <div class="box" id="experience">
-            <span>4+</span>
-            <h3>years of experience</h3>
-        </div>
-
-        <div class="box">
-            <span>3</span>
-            <h3>projects completed</h3>
-        </div>
-
-        <div class="box">
-            
-            <a href="https://www.hackerrank.com/dashboard" title="Tap to view"><span>hacker rank</span></a>
-            <h3>Stars in Python</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-<!-- about section ends -->
-
-<!-- education section starts  -->
-
-<section class="education" id="education">
-    <h1 class="heading"> Career <span>Journey</span> </h1>
-  
-    <div class="box-container">
-      <div class="box">
-        <i class="fas fa-graduation-cap"></i>
-        <h3>Bachelor of Computer Applications (BCA)</h3>
-        <p>Reva University, Bangalore</p>
-        <p>Gained a strong foundation in computer science fundamentals, including programming, data structures, and algorithms. Developed problem-solving and analytical skills.</p>
-      </div>
-  
-      <div class="box">
-        <i class="fas fa-graduation-cap"></i>
-        <h3>Full Stack Web Development</h3>
-        <p>Pyspiders, Bangalore</p>
-        <p>Mastered Python, Django, and front-end technologies. Built  web applications, including Ecommerce applications.</p>
-      </div>
-  
-      <div class="box">
-        <i class="fas fa-briefcase"></i>
-        <h3>Software Developer</h3>
-        <p>Spiderfocus Solutions</p>
-        <p>Gained 2+ years of industry experience. Developed modules using Python and Django. Contributed to the project.</p>
-      </div>
-  
-      <div class="box">
-        <i class="fas fa-briefcase"></i>
-        <h3>Python Web Developer</h3>
-        <p>Marolix Technology Solutions</p>
-        <p>Specialized in Python web development. Built  web applications using Django. Improved website performance by 70%.</p>
-      </div>
-  
-      <div class="box">
-        <i class="fas fa-briefcase"></i>
-        <h3>Python Developer</h3>
-        <p>Tata Consultancy Services (TCS)</p>
-        <p>Currently working on Bank of america .Leveraging Python skills like pandas, numpy, pyspark, hadoop.</p>
-      </div>
-    </div>
-  </section>
-  
-
-<!-- education section ends -->
-<!-- skils section  -->
-
-<section class="Skills" id="Skills">
-
-    <h1 class="heading"> My <span>Skills</span> </h1>
-    
-    <div class="counters">
-    
-        <div class="boxs">
-            <a href="https://www.python.org/"><h3 title="Tap to view">Python</h3></a>  
-        </div>
-    
-        <div class="boxs">
-            <a href="https://docs.djangoproject.com/en/3.2/"><h3 title="Tap to view">django</h3></a>
-        </div>
-    
-        <div class="boxs">
-            <a href="https://www.w3schools.com/sql/"><h3 title="Tap to view">Sql</h3></a>
-        </div>
-    
-        <div class="boxs">
-            <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/"><h3 title="Tap to view">Bootstrap</h3></a>
-        </div>
-        
-        <div class="boxs">
-            <a href="https://opencv.org/"><h3 title="Tap to view">Open cv</h3></a>
-        </div>
-        <div class="boxs">
-            <a href=""><h3 title="Tap to view">Html5</h3></a>
-        </div>
-        <div class="boxs">
-            <a href=""><h3 title="Tap to view">Css3</h3></a>
-        </div>
-        <div class="boxs">
-            <a href=""><h3 title="Tap to view">manual testing</h3></a>
-        </div>
-        
-    
-    </div>
-    
-    </section>
-    
-<!-- portfolio section starts  -->
-<section class="portfolio" id="portfolio">
-
-    <h1 class="heading">P<span>rojects</span> <h1>
-  
-    <div class="box-container">
-  
-      <div class="box">
-        <a href="food website/index1.html">
-          <img src="img/pizza palace project.png" alt="Pizza Palace Website - A sample restaurant website" title="Pizza Palace Website">
-        </a>
-        <h3>Restaurant Website</h3>
-        <p>This project showcases my ability to create a user-friendly website for a restaurant, including menus, contact information, and a visually appealing layout.</p>
-      </div>
-  
-      <div class="box">
-        <a href="#" title="Coming Soon">
-          <img src="img/ecommerce website.png" alt="Ecommerce Website - Coming Soon" title="Ecommerce Website (Coming Soon)">
-        </a>
-        <h3>Ecommerce Website (Coming Soon)</h3>
-        <p>Stay tuned for a link to my upcoming ecommerce website project.</p>
-      </div>
-  
-      <div class="box">
-        <a href="https://replit.com/@wikijerry/pong#main.py" title="Pong Game">
-          <img src="img/pong.png" alt="Pong Game - A simple Python game" title="Pong Game">
-        </a>
-        <h3>Pong Game</h3>
-        <p>This project demonstrates my Python programming skills by building a classic pong game.</p>
-      </div>
-  
-    </div>
-  
-  </section>
-  
-<!-- portfolio section ends -->
-
-<!-- contact section starts  -->
-
-<section class="contact" id="contact">
-
-<h1 class="heading"> <span>contact</span> me </h1>
-
-<div class="row">
-
-    <div class="content">
-
-        <h3 class="title"><span>contact</span> info </h3>
-
-        <div class="info">
-            <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" title="tap to view">
-            <button class="btn"><i class="fas fa-envelope"></i> vigneshramesh51@gmail.com</button>
-            </a>
-        
-            <a href="">
-            <button class="btn"> <i class="fas fa-phone"></i> +91-8553834060</button>
-            </a>
-
-            <a href="https://www.instagram.com/the_cyborgh_guy/" title="Tap to view">
-            <button class="btn"><i class="fab fa-instagram"></i> the_cyborgh_guy</button>
-            </a>
-
-            <a href="https://www.linkedin.com/in/vignesh-r-87087b227/" title="Tap to view">
-            <button class="btn"><i class="fab fa-linkedin"></i>vignesh r</button>
-            </a>
-
-            <button class="btn"><i class="fas fa-map-marker-alt"></i> Banglore,india - 563122 </button>
-        </div>
-
-    </div>
-
-    <form action="" class="info">
-
-        <input type="text" placeholder="name" class="box">
-        <input type="email" placeholder="email" class="box">
-        <input type="text" placeholder="project" class="box">
-        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
-        <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i> </button>
-
-    </form>
-
-</div>
-
-</section>
-
-<!-- contact section ends -->
-
-
-<!-- scroll top button  -->
-
-
-    <a href="#home" class="top">
-        <i class="far fa-arrow-alt-circle-up"></i>
-    </a>
-
-
-
-
-
-
-<div class="loader-container">
-    <img src="img/45936-logo-custom-animation.gif" alt="">
-</div>
-
-
-
-
-
-
-
-
-
-<!-- jquery cdn link  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<!-- custom js file link  -->
-<script src="script.js"></script>
-
-
-</body>
+    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>
