@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "wiki-portfolio",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
