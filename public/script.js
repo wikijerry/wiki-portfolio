@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $('#id').click(function(){
+  $('#hbtn').click(function(){
     $(this).toggleClass('fa-times');
     $('header').toggleClass('toggle');
   });
