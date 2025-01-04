@@ -43,6 +43,10 @@ body{
     overflow-x: hidden;
     padding-left: 35rem;
 }
+body.moved {
+  transform: translateX(-35rem); /* Moves body to the left */
+  transition: transform 0.3s ease; /* Smooth animation */
+}
 
 section{
     min-height: 50vh;
@@ -82,90 +86,76 @@ section{
     color:var(--yellow);
 }
 
+
 header{
-    position: fixed;
-    top:0; left:0;
-    z-index: 1000;
-    height:100%;
-    width:35rem;
-    background:#1a1a1a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    text-align: center;
-    
+  position: fixed;
+  top:0; left:0;
+  z-index: 1000;
+  height:100%;
+  width:35rem;
+  background:#1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
 }
 
 header .user img{
-    height:20rem;
-    width:20rem;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border:.4rem solid var(--yellow);
+  height:17rem;
+  width:17rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border:.7rem solid var(--yellow);
 }
 
 header .user .name{
-    font-size: 3.5rem;
-    color:#fff;
+  font-size: 3.5rem;
+  color:#fff;
 }
-header .user .post {
-    font-size: 2rem;
-    color: #eee;
-    margin-right: 1rem; /* Add margin here */
-    margin-top: 4rem;
-  }
-  
-  header .user p span {
-    font-size: 1.3rem;
-    background: rgb(66, 66, 66);
-    color: #fff;
-    border-radius: 5rem;
-    padding: .5rem 2.5rem;
-    border: .2rem solid var(--yellow);
-  }
-  
+
+header .user .post{
+  font-size: 2rem;
+  color:#eee;
+}
+
 header .navbar{
-    width:100%;
+  width:100%;
 }
 
 header .navbar ul{
-    list-style: none;
-    padding:1rem 3rem;
+  list-style: none;
+  padding:1rem 3rem;
 }
 
 
 header .navbar ul li a{
-    display: block;
-    padding:1rem;
-    margin:1.5rem 0;
-    background:#333;
-    color:#dadadaf6;
-    font-size: 2rem;
-    border-radius: 5rem;
-    border:.2rem solid var(--yellow);
+  display: block;
+  padding:1rem;
+  margin:1.5rem 0;
+  background:#333;
+  color:#fff;
+  font-size: 2rem;
+  border-radius: 5rem;
+  border: .2rem solid var(--yellow);
 }
 
 header .navbar ul li a:hover{
-    background:var(--yellow);
-}
-header.toggle {
-  transform: translateX(-100%); /* Moves header out of view */
+  background:var(--yellow);
 }
 
 #hbtn{
-    position: fixed;
-    top:2rem; right:2rem;
-    background:#333;
-    color:var(--yellow);
-    cursor: pointer;
-    font-size: 2.5rem;
-    padding:1rem 1.5rem;
-    z-index: 1000;
-    display: flex;
-    border-radius: 2rem;
-    border : .2rem solid var(--yellow);
+  position: fixed;
+  top:2rem; right:2rem;
+  background:#333;
+  color:#fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding:1rem 1.5rem;
+  z-index: 1000;
+  display: none;
+  border: .2rem solid var(--yellow);
 }
 
 .home{
@@ -192,11 +182,18 @@ header.toggle {
     color:var(--yellow);
 }
 
+/* p .highlight {
+  color: var(--yellow)/* Use any desired color 
+} */
+
 .home p{
     font-size:2rem;
     color:#eee;
     padding: 1rem 0;
 }
+
+
+
 .home a .btn{
     border: .2rem solid var(--yellow);
 }
@@ -231,9 +228,15 @@ header.toggle {
     font-weight: normal;
 }
 
+
 .about .row .info h3 span{
     color:#eee;
     padding:0 .5rem;
+}
+
+#age span {
+  display: inline !important;
+  visibility: visible !important;
 }
 
 
@@ -592,37 +595,75 @@ header.toggle {
     font-size: calc(var(--font-size-base) * 1);
   }
   
-  /* ... other styles ... */
+  /* ... other styles ... */  
   
-  @media (max-width: 1200px) {
-    html {
-      font-size: calc(var(--font-size-base) * 0.875); /* Adjust font size as needed */
-    }
   
-    .home {
-      padding: 2rem;
-    }
+@media (max-width:1200px){
+
+  html{
+      font-size: 55%;
   }
-  
-  @media (max-width: 991px) {
-    /* ... your existing header and navigation logic ... */
+
+  .home{
+      padding:1rem 4rem;
   }
-  
-  @media (max-width: 768px) {
-    html {
-      font-size: calc(var(--font-size-base) * 0.75);
-    }
+
+}
+
+@media (max-width:991px){
+
+ header{
+     left:-120%;
+ }
+
+ #hbtn{
+     display: block;
+ }
+
+ header.toggle{
+  left:0%;
+ }
+
+ body{
+     padding:0;
+ }
+
+}
+
+@media (max-width:768px){
+
+  html{
+      font-size: 50%;
   }
-  
-  @media (max-width: 400px) {
-    html {
-      font-size: calc(var(--font-size-base) * 0.625);
-    }
-  
-    .heading {
-      text-align: center; /* Center heading on small screens */
-    }
-  
-    /* ... other specific element adjustments ... */
+
+}
+
+@media (max-width:400px){
+
+  header{
+      width: 100vw;
   }
-  
+
+  .heading{
+      margin:0 3rem;
+  }
+
+  .about .row .counter .box{
+      width: 100%;
+  }
+
+  .education .box-container .box{
+      width:100%;
+  }
+
+  .portfolio .box-container .box{
+      width:100%;
+  }
+
+  .contact .row form{
+      margin:3rem 0;
+  }
+
+
+
+}

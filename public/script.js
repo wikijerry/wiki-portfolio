@@ -7,7 +7,7 @@ $(document).ready(function(){
 
   $(window).on('scroll load',function(){
 
-    $('#id').removeClass('fa-times');
+    $('#hbtn').removeClass('fa-times');
     $('header').removeClass('toggle');
 
     if($(window).scrollTop() > 0){
@@ -15,6 +15,23 @@ $(document).ready(function(){
     }else{
       $('.top').hide();
     }
+
+  });
+
+  // smooth scrolling 
+
+  $('a[href*="#"]').on('click',function(e){
+
+    e.preventDefault();
+
+    $('html, body').animate({
+
+      scrollTop : $($(this).attr('href')).offset().top,
+
+    },
+      500, 
+      'linear'
+    );
 
   });
 
@@ -80,14 +97,14 @@ const ageElement = document.getElementById('age');
     const currentAgeText = ageElement.textContent.trim();
     const currentAge = parseInt(currentAgeText.substring(6), 10); // Extract the age number
     const newAge = currentAge;
-    ageElement.textContent = ` age : ${newAge}`;
+    ageElement.textContent = `age : ${newAge}`;
   }
 
   // Initial call to update the age
   updateAge();
 
   // Schedule the update for the next year
-  function scheduleUpdate() {
+  function scheduleUpdateage() {
     const nextYear = new Date();
     nextYear.setFullYear(nextYear.getFullYear() + 1, 0, 1); // Set to January 1st of the next year
     const timeUntilNextYear = nextYear - new Date();
@@ -95,4 +112,4 @@ const ageElement = document.getElementById('age');
     setTimeout(updateAge, timeUntilNextYear);
   }
 
-  scheduleUpdate();
+  scheduleUpdateage();
